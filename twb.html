@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>示例</title>
+</head>
+<body>
+    <div class="test" bind-model="name,age">
+    	{{ name  +   
+
+    	age   }}
+    	<input type="text" value="{{ age    }}">
+		<p>{{name}}</p>
+		<!-- todos:数据嵌套问题 -->
+		<div class="test" bind-model="year">
+			{{year}}
+		</div>
+    </div>
+    <script src="./twb.js"></script>
+    <script>
+    	var ins=new Twb({
+			target:".test",
+			data:{
+				name:"hello world",
+				age:"12",
+				year:"1987"
+			}
+		});
+    </script>
+</body>
+</html>
