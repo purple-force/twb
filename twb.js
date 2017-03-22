@@ -5,7 +5,7 @@ var Twb=function(opt){
 	this.bindedTarget=this._getBindedTarget();
 	this.data=opt.data;
 	this.cache={};
-	this.keyTextMap=[];//存放每个绑定数据的DOM对象的数据变量及其innerHTML
+	this.keyTextMap={};//存放每个绑定数据的DOM对象的数据变量及其innerHTML
 	this.init();
 };
 Twb.prototype={
